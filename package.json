@@ -1,0 +1,53 @@
+{
+  "name": "@yukikisaku/pi-chain-skills-prompts",
+  "version": "0.1.0",
+  "description": "Chain Pi prompt templates and skills into a single prompt",
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "files": [
+    "index.ts",
+    "logic.ts",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "smoke:packed": "node scripts/smoke-packed.mjs",
+    "check": "npm test && npm run smoke:packed && npm pack --dry-run"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "prompt",
+    "skill",
+    "chain"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "vitest": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukikisaku/pi-chain-skills-prompts.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
